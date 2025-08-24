@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/991957f78c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-[#f4f5f6]   h-full p-5 ">
+    <div class="bg-white max-w-lg mx-auto p-2">
+        <div class="border-b-1 border-b-gray-300 flex justify-between  ">
+            <div class="flex">
+                <img src="./assets/Group.png" class="size-12" alt="">
+                <div class="ml-1">
+                    <h1 class="font-bold">$ <span id="main-money" class="">45000</span></h1>
+                    <p class="text-gray-500">Available Balance</p>
+                </div>
+            </div>
+            <button class="btn text-gray-400"><i
+                    class="fa-solid fa-right-from-bracket text-gray-800 rotate-180"></i>Login</button>
+        </div>
+
+        <div class="my-10">
+            <h1 class="font-bold text-xl lg:text-3xl mb-2">🔥 Welcome to Payooo!</h1>
+            <p class="text-gray-400 lg:text-xl ">Enjoy easy and convenient financial services with us. Cashout charge is
+                low and </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 p-1 ">
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center  p-2 gap-2">
+                <img src="./assets/wallet1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600"> Add money</p>
+            </div>
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+                <img src="./assets/send1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600">Cash Out</p>
+            </div>
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+                <img src="./assets/money1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600">transfer Money</p>
+            </div>
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+                <img src="./assets/bonus1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600">Get bonus</p>
+            </div>
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+                <img src="./assets/purse1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600">Pay Bill</p>
+            </div>
+            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+                <img src="./assets/transaction1.png" class="size-8" alt="">
+                <p class=" text-sm text-gray-600">Transaction</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bg-white gap-2  max-w-lg mx-auto p-2">
+        <h1 class="font-bold text-2xl">Add Money</h1>
+        <form action="">
+
+            <div>
+                <fieldset class="fieldset w-full">
+
+                    <select id="Bank" class="select w-full  bg-[#f4f5f6] p-2 rounded-3xl">
+                        <option disabled selected>Select A Bank</option>
+                        <option>Ab Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                        <option>Gramme Bank</option>
+                    </select>
+
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend text-base">Bank Account Number</legend>
+                    <input type="text" id="Account-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                        placeholder="Enter 11 Digit amount number" />
+
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend text-base">Amount to Add</legend>
+                    <input type="text" id="Amount" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                        placeholder="Add amount to withdraw" />
+
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend text-base">Pin number</legend>
+                    <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl" placeholder="Enter 4 digit pin" />
+
+                </fieldset>
+                <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="submitButton">Add
+                    Money</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./home.js">
+
+    </script>
+</body>
+
+</html>
