@@ -32,11 +32,13 @@
         </div>
 
         <div class="grid grid-cols-3 gap-4 p-1 ">
-            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center  p-2 gap-2">
+            <div id="add-money-btn"
+                class="border border-gray-300 rounded-md flex flex-col justify-center items-center  p-2 gap-2">
                 <img src="./assets/wallet1.png" class="size-8" alt="">
                 <p class=" text-sm text-gray-600"> Add money</p>
             </div>
-            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+            <div id="cash-out-btn"
+                class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
                 <img src="./assets/send1.png" class="size-8" alt="">
                 <p class=" text-sm text-gray-600">Cash Out</p>
             </div>
@@ -58,9 +60,13 @@
             </div>
         </div>
 
+
+
     </div>
 
-    <div class="bg-white gap-2  max-w-lg mx-auto p-2">
+
+
+    <div id="add-money" class="bg-white gap-2  max-w-lg mx-auto p-2">
         <h1 class="font-bold text-2xl">Add Money</h1>
         <form action="">
 
@@ -89,12 +95,41 @@
                 </fieldset>
                 <fieldset class="fieldset">
                     <legend class="fieldset-legend text-base">Pin number</legend>
-                    <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl" placeholder="Enter 4 digit pin" />
+                    <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                        placeholder="Enter 4 digit pin" />
 
                 </fieldset>
                 <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="submitButton">Add
                     Money</button>
             </div>
+        </form>
+    </div>
+
+    <div id="cash-out" class="hidden bg-white max-w-lg mx-auto p-2">
+        <h1 class="text-2xl font-bold">Cash Out</h1>
+
+        <form action="
+        ">
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Agent Number</legend>
+                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter 4 digit pin" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Amount</legend>
+                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter 4 digit pin" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Pin number</legend>
+                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter 4 digit pin" />
+
+            </fieldset>
+
+             <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="submitButton">Withdraw Money</button>
         </form>
     </div>
 
