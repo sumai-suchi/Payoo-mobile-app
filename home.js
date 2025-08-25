@@ -2,15 +2,54 @@ console.log('this is home')
 
 let pin=1234;
 
+function getValue(id){
+   
+  return document.getElementById(id);
+}
 
-document.getElementById('submitButton').addEventListener('click',function(e){
+//function to get inner text
+function getInnerTextMainBalance(id){
+
+  let Money=getValue(id);
+ let MoneyAmount=parseInt(Money.innerText);
+ 
+  return MoneyAmount;
+
+}
+
+//setMain Balance
+function setMainBalance(value)
+{
+   return  getValue('main-money').innerText=value
+
+}
+
+//Toggling features
+
+function toggleWithButtons(id)
+{
+   const forms= document.getElementsByClassName('form')
+  for (const form of forms) {
+       
+    form.style.display='none';
+  }
+   
+  getValue(id).style.display='block';
+}
+
+
+
+
+
+
+getValue('submitButton').addEventListener('click',function(e){
     e.preventDefault();
 
- const bankName=document.getElementById('Bank').value;
+ const bankName=getValue('Bank').value;
 
- const Amount=parseInt(document.getElementById('Amount').value)
- const PinNumber=parseInt(document.getElementById('Pin-number').value)
- const accountNumber=parseInt(document.getElementById('Account-number').value)
+ const Amount=parseInt(getValue('Amount').value)
+ const PinNumber=parseInt(getValue('Pin-number').value)
+ const accountNumber=parseInt(getValue('Account-number').value)
 
  console.log(bankName,Amount,PinNumber,accountNumber)
 
@@ -20,45 +59,75 @@ document.getElementById('submitButton').addEventListener('click',function(e){
     return;
  }
   
-  if(accountNumber >11){
+//   if(accountNumber >=11){
 
-    console.log('wrong account number.it should be 11 digit')
-    return;
- }
+//     console.log('wrong account number.it should be 11 digit')
+//     return;
+//  }
   
  if(Amount <0 || Amount ===0){
     
     console.log('this amount cant be add,sorry try again')
   
  }
- let Money=document.getElementById('main-money');
- let MoneyAmount=parseInt(Money.innerText)
- console.log(Money,MoneyAmount)
+ 
 
- let totalMoney=MoneyAmount+Amount
+ let totalMoney=getInnerTextMainBalance('main-money')+Amount
  console.log(totalMoney)
 
 
   
- document.getElementById('main-money').innerText=totalMoney
+setMainBalance(totalMoney);
 
 
 })
+
+
+
+//Cash out section
+
+getValue('withdraw-btn').addEventListener('click',function(e)
+{
+  e.preventDefault()
+  const CashOutPin=parseInt( getValue('Pin').value)
+  if(CashOutPin!== pin){
+       
+    console.log('wrong pin number')
+  }
+  let amount=parseInt(getValue('amount').value);
+  console.log(amount)
+
+  
+
+ let totalMoney=getInnerTextMainBalance('main-money')-amount;
+ 
+  setMainBalance(totalMoney)
+
+})
+
 
 // Toggle Functionality
 
-document.getElementById('add-money-btn').addEventListener('click',function(){
+getValue('add-money-btn').addEventListener('click',function(){
+ 
+  
 
-    document.getElementById('cash-out').style.display='none';
-     document.getElementById('add-money').style.display='Block';
-
+  toggleWithButtons('add-money')
 
 })
-document.getElementById('cash-out-btn').addEventListener('click',function(){
+getValue('cash-out-btn').addEventListener('click',function(){
+   
+toggleWithButtons('cash-out')
 
-  document.getElementById('add-money').style.display='none';
-   let CashOut=document.getElementById('cash-out');
-   CashOut.classList.remove('hidden')
-   CashOut.style.display='block';
+})
+
+getValue('transfer-money-btn').addEventListener('click',function(){
+   
+toggleWithButtons('transfer-parent')
+
+})
+getValue('get-bonus-btn').addEventListener('click',function(){
+   
+toggleWithButtons('get-bonus-parent')
 
 })

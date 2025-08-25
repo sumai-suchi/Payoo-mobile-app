@@ -42,11 +42,11 @@
                 <img src="./assets/send1.png" class="size-8" alt="">
                 <p class=" text-sm text-gray-600">Cash Out</p>
             </div>
-            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+            <div id="transfer-money-btn" class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
                 <img src="./assets/money1.png" class="size-8" alt="">
                 <p class=" text-sm text-gray-600">transfer Money</p>
             </div>
-            <div class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
+            <div id="get-bonus-btn" class="border border-gray-300 rounded-md flex flex-col justify-center items-center p-2 gap-2">
                 <img src="./assets/bonus1.png" class="size-8" alt="">
                 <p class=" text-sm text-gray-600">Get bonus</p>
             </div>
@@ -66,14 +66,14 @@
 
 
 
-    <div id="add-money" class="bg-white gap-2  max-w-lg mx-auto p-2">
+    <div id="add-money" class="bg-white form gap-2  max-w-lg mx-auto p-2">
         <h1 class="font-bold text-2xl">Add Money</h1>
         <form action="">
 
             <div>
                 <fieldset class="fieldset w-full">
 
-                    <select id="Bank" class="select w-full  bg-[#f4f5f6] p-2 rounded-3xl">
+                    <select id="Bank" class="f select w-full  bg-[#f4f5f6] p-2 rounded-3xl">
                         <option disabled selected>Select A Bank</option>
                         <option>Ab Bank</option>
                         <option>Dutch Bangla Bank</option>
@@ -104,34 +104,92 @@
             </div>
         </form>
     </div>
-
-    <div id="cash-out" class="hidden bg-white max-w-lg mx-auto p-2">
+ <!-- cash Out -->
+    <div style="display: none;" id="cash-out" class="form bg-white max-w-lg mx-auto p-2">
         <h1 class="text-2xl font-bold">Cash Out</h1>
 
         <form action="
         ">
             <fieldset class="fieldset">
                 <legend class="fieldset-legend text-base">Agent Number</legend>
-                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
-                    placeholder="Enter 4 digit pin" />
+                <input type="text" id="Agent-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter agent number" />
 
             </fieldset>
             <fieldset class="fieldset">
                 <legend class="fieldset-legend text-base">Amount</legend>
-                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
-                    placeholder="Enter 4 digit pin" />
+                <input type="text" id="amount" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter amount" />
 
             </fieldset>
             <fieldset class="fieldset">
                 <legend class="fieldset-legend text-base">Pin number</legend>
-                <input type="text" id="Pin-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                <input type="text" id="Pin" class="input w-full bg-[#f4f5f6] rounded-3xl"
                     placeholder="Enter 4 digit pin" />
 
             </fieldset>
 
-             <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="submitButton">Withdraw Money</button>
+             <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="withdraw-btn">Withdraw Money</button>
         </form>
     </div>
+    <!-- transfer Money -->
+     <div style="display: none;"  id="transfer-parent" class="form bg-white max-w-lg mx-auto p-2">
+        <h1 class="text-2xl font-bold">Transfer Money</h1>
+
+        <form action="
+        ">
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Agent Number</legend>
+                <input type="text" id="Agent-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter agent number" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Amount</legend>
+                <input type="text" id="amount" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter amount" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Pin number</legend>
+                <input type="text" id="Pin" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter 4 digit pin" />
+
+            </fieldset>
+
+             <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="withdraw-btn">Withdraw Money</button>
+        </form>
+    </div>
+    <!-- Get Bonus -->
+ 
+     <div style="display: none;"  id="get-bonus-parent" class="form bg-white max-w-lg mx-auto p-2">
+        <h1 class="text-2xl font-bold">Get Bonus</h1>
+
+        <form action="
+        ">
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Agent Number</legend>
+                <input type="text" id="Agent-number" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter agent number" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Amount</legend>
+                <input type="text" id="amount" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter amount" />
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-base">Pin number</legend>
+                <input type="text" id="Pin" class="input w-full bg-[#f4f5f6] rounded-3xl"
+                    placeholder="Enter 4 digit pin" />
+
+            </fieldset>
+
+             <button class="btn mt-8 bg-[#0874F2] w-full rounded-full text-white" id="withdraw-btn">Withdraw Money</button>
+        </form>
+    </div>
+
 
     <script src="./home.js">
 
